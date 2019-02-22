@@ -103,8 +103,32 @@ fetch("/api/getfiles")
     .then(data => data.json())
     .then(data => music(data.musics))
 
+const controlMedia = (socket,connectWith)=>{
+   let msg = {
+       to : connectWith
+   }
+    
+    socket.on("change", msg=>{
+
+    })
+    socket.on("ok", msg=>{
+
+    })
+    socket.on("nochange", msg=>{
+        
+    })
+
+
+
+
+}
+
+
+
 const id = Math.round(Math.random() * Math.pow(10, 10))
 window.onload = () => {
+    let connectWith
+ 
     const socket = io()
     socket.emit("control", {
         lid: id,
@@ -126,4 +150,10 @@ window.onload = () => {
         }
     }
     $("#idno").onchange = connectPlayer
+
+    socket.on("connected", (msg)=>{
+        connectWith = msg.player
+    })
+
+    controlMedia(socket,connectWith)
 }
