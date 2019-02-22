@@ -1,0 +1,19 @@
+section {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+
+    h1{
+        text-align: center;
+        padding: 10px;
+        font-size: 30px;
+    }
+    h1#idno{
+        display: block;
+        background: #de6b44;
+        box-shadow: inset 2px 3px 10px #403020a4;
+        color: #fff;
+        letter-spacing: 4px;
+    }
+}

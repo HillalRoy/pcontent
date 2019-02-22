@@ -1,0 +1,27 @@
+section {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 90vh;
+}
+
+section h1 {
+  text-align: center;
+  padding: 10px;
+  font-size: 30px;
+}
+
+section h1#idno {
+  display: block;
+  background: #de6b44;
+  -webkit-box-shadow: inset 2px 3px 10px #403020a4;
+          box-shadow: inset 2px 3px 10px #403020a4;
+  color: #fff;
+  letter-spacing: 4px;
+}
+/*# sourceMappingURL=player.css.map */

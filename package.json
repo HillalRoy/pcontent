@@ -1,0 +1,33 @@
+{
+  "name": "testnode",
+  "version": "1.0.0",
+  "description": "any things to test",
+  "main": "app.js",
+  "scripts": {
+    "test": "start http://127.0.0.1 && nodemon app",
+    "start": "node app",
+    "lint": "eslint .",
+    "lintfix": "eslint . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HillalRoy/testnode.git"
+  },
+  "author": "Hillal Kumar Roy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HillalRoy/testnode/issues"
+  },
+  "homepage": "https://github.com/HillalRoy/testnode#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-fileupload": "^1.1.1-alpha.1",
+    "express-handlebars": "^3.0.0",
+    "jsmediatags": "^3.8.1",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.13.0",
+    "eslint-config-google": "^0.12.0"
+  }
+}

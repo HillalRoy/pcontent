@@ -1,0 +1,66 @@
+.contener {
+  margin: 0 20%;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  height: 100vh;
+}
+
+div.inputs {
+  padding: 20px;
+  background: #aaa;
+  -webkit-box-shadow: -4px 4px 10px #0004;
+          box-shadow: -4px 4px 10px #0004;
+  border-radius: 5px;
+}
+
+input {
+  margin: 20px 0;
+  color: #F2B134;
+  background: #112F41;
+}
+
+input.file {
+  background: transparent;
+  color: #112F41;
+  cursor: pointer;
+  border: 1px solid #111;
+  -webkit-box-shadow: -5px 5px 20px #055c5d2c;
+          box-shadow: -5px 5px 20px #055c5d2c;
+}
+
+input.file::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+input.file::before {
+  content: 'UPLOAD';
+  color: #F2B134;
+  display: inline-block;
+  background: #112F41;
+  padding: 5px 8px;
+  outline: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+input.but {
+  border: none;
+  outline: none;
+  padding: 8px 20px;
+  -webkit-box-shadow: -5px 5px 10px #055c5d4c;
+          box-shadow: -5px 5px 10px #055c5d4c;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+/*# sourceMappingURL=upload.css.map */

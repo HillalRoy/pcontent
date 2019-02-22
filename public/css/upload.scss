@@ -1,0 +1,56 @@
+.contener {
+    margin: 0 20%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+}
+
+div.inputs {
+    padding: 20px;
+    background: #aaa;
+    box-shadow: -4px 4px 10px #0004;
+    border-radius: 5px;
+}
+
+input {
+    margin: 20px 0;
+    color: #F2B134;
+    background: #112F41;
+}
+
+input.file {
+    background: transparent;
+    color: #112F41;
+    cursor: pointer;
+    border: 1px solid #111;
+    box-shadow: -5px 5px 20px #055c5d2c;
+
+
+    &::-webkit-file-upload-button {
+        visibility: hidden;
+    }
+
+    &::before {
+        content: 'UPLOAD';
+        color: #F2B134;
+        display: inline-block;
+        background: #112F41;
+        padding: 5px 8px;
+        outline: none;
+        user-select: none;
+        cursor: pointer;
+        font-weight: bold;
+
+    }
+}
+
+input.but {
+    border: none;
+    outline: none;
+    padding: 8px 20px;
+    box-shadow: -5px 5px 10px #055c5d4c;
+    text-transform: uppercase;
+    font-weight: bold;
+}
