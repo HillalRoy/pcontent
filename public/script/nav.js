@@ -54,8 +54,6 @@ const navSwipe = (eliment) => {
         width = eliment.getBoundingClientRect().width
     }
 
-
-
     const move = (el) => {
 
         currentPosition = {

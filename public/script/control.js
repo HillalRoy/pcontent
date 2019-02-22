@@ -2,9 +2,6 @@ let i = 0
 const songCTime = (ct) => {
     const cm = Math.floor(ct / 60)
     const cs = Math.floor(ct % 60)
-    // console.log(cm==NaN)
-    if (cm === NaN) cm = 0
-    if (cs === NaN) cs = 0
     return `${cm < 10 ? "0"+cm : cm }:${cs< 10 ? "0"+cs : cs}`
 }
 const getPersent = () => {

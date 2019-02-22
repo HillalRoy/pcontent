@@ -1,6 +1,3 @@
-
-
-
 //Swipe Event handelar
 class Swipe {
     constructor(eliment) {

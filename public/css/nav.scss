@@ -3,9 +3,6 @@
         @content
     }
 }
-
-
-
 .padding {
     padding: 0 70px;
     display: flex;
@@ -17,7 +14,6 @@
 
 nav {
     position: fixed;
-    // background: #1C3341;
     background: #fff;
     box-shadow: 0 5px 10px #3334;
 
@@ -28,14 +24,12 @@ nav {
 
     @include mobail{
         display: flex;
-        // justify-content: center;
         align-items: center;
     }
 
     ul {
         list-style: none;
         display: flex;
-        // transition: all 0.1s;
 
         @include mobail{
             display: block;
@@ -48,7 +42,6 @@ nav {
 
         li {
             margin: 0 10px;
-
             @include mobail{
                 margin: 20px 0;
             }
@@ -57,7 +50,6 @@ nav {
         li a {
             font-size: 1.2em;
             text-decoration: none;
-            // color: #F2C975;
             color: #000;
             display: block;
             padding: 5px 10px;
@@ -69,14 +61,12 @@ nav {
             }
 
             &:hover {
-                // background: #016e5e;
                 background: #00000044;
                 box-shadow: 4px 4px 5px #0004;
                 color: #ED6353;
             }
 
             &.active {
-                // background: #008773;
                 background: #00000044;
                 color: #1C3341;
             }
@@ -98,8 +88,6 @@ nav {
         padding-left: 20px;
     }
 }
-
-
 
 @media (max-width: 624px) {
     nav {

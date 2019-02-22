@@ -10,7 +10,7 @@ const port = process.env.PORT || 80;
 /**
  *  soket.io
  * */
-require(path.join(__dirname,"renders/socket"))(server)
+require(path.join(__dirname, "renders/socket"))(server)
 
 app.use(upload())
 
@@ -28,4 +28,4 @@ app.set("view engine", "hbs")
 app.use("/", render)
 app.use("/api", api)
 
-server.listen(port, ()=>console.log("server runing..."))
+server.listen(port, () => console.log("server runing..."))

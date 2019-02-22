@@ -11,9 +11,6 @@ const dataload = async (link, el)=> {
     const b64encoded = btoa(String.fromCharCode.apply(null,await data.data))
     el.src = 'data:image/jpeg;base64,' +await b64encoded
 }
-
-
-
 function files(list) {
     makeList(list.musics, $(".songs"))
 }
@@ -31,7 +28,6 @@ const makeList = (list, target) => {
 
         const img = new Image()
 
-        // Song cover art
         dataload(songName , img)
 
         const divTag = document.createElement("div")
@@ -52,10 +48,6 @@ const makeList = (list, target) => {
     });
 }
 
-
-
-
-
 let song
 
 const play = (e) => {
@@ -66,14 +58,6 @@ const play = (e) => {
     song.play()
     console.dir(song)
 }
-
-
-
-
-
-
-
-
 
 //Keybord Sensive
 const keydown = (e) => {
@@ -99,8 +83,6 @@ const keydown = (e) => {
         console.log("/\\")
 
     }
-
 }
-
 
 addEventListener("keydown", keydown)

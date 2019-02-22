@@ -58,32 +58,14 @@ const makeList = (list, target) => {
         const img = new Image()
 
         getmusicdata(div, songName)
-        // Song cover art
+
         dataload(songName, img)
-
-        // const divTag = document.createElement("div")
-
-        // divTag.classList.add("tag")
-
-        // songName = songName.substring(0, songName.length - 4)
-        // if (songName.length > 23)
-        //     songName = songName.substring(0, 23) + "..."
-
-        // divTag.innerHTML = `
-        //     <h6>${songName}</h6>
-        //     <p>${e.singer ? e.singer : ""}</p>`
-
-        // div.appendChild(divTag)
 
         div.appendChild(img)
 
         target.appendChild(div)
     });
 }
-
-
-
-
 
 let song
 
@@ -95,14 +77,6 @@ const play = (e) => {
     song.play()
     console.dir(song)
 }
-
-
-
-
-
-
-
-
 
 //Keybord Sensive
 const keydown = (e) => {
@@ -128,8 +102,6 @@ const keydown = (e) => {
         console.log("/\\")
 
     }
-
 }
-
 
 addEventListener("keydown", keydown)
