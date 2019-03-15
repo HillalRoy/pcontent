@@ -69,7 +69,7 @@
   height: 5px;
 }
 
-.files-list div.list div.file-i {
+.files-list div.list .file-i {
   overflow: hidden;
   width: 100px;
   background: #fff;
@@ -83,18 +83,18 @@
   transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
 }
 
-.files-list div.list div.file-i:focus, .files-list div.list div.file-i:hover {
+.files-list div.list .file-i:focus, .files-list div.list .file-i:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   border: 2px solid #E17D27;
 }
 
-.files-list div.list div.file-i img {
+.files-list div.list .file-i img {
   width: 100%;
   height: auto;
 }
 
-.files-list div.list div.file-i div.tag {
+.files-list div.list .file-i div.tag {
   position: absolute;
   background: #fffd;
   bottom: 0;
@@ -102,11 +102,11 @@
   width: 100%;
 }
 
-.files-list div.list div.file-i div h6 {
+.files-list div.list .file-i div h6 {
   color: #6a50b4;
 }
 
-.files-list div.list div.file-i div p {
+.files-list div.list .file-i div p {
   color: #6a50b4;
   font-size: 10px;
 }

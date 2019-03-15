@@ -1,8 +1,6 @@
 const socket = require("socket.io")
 let io
-
 let users = {}
-
 const connection = user => {
     user.on('control', msg => {
         users[user.id] = msg

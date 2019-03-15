@@ -4,8 +4,8 @@
   "description": "any things to test",
   "main": "app.js",
   "scripts": {
-    "test": "start http://127.0.0.1 && nodemon app",
     "start": "node app",
+    "server": "nodemon app.js",
     "lint": "eslint .",
     "lintfix": "eslint . --fix"
   },
@@ -25,9 +25,5 @@
     "express-handlebars": "^3.0.0",
     "jsmediatags": "^3.8.1",
     "socket.io": "^2.2.0"
-  },
-  "devDependencies": {
-    "eslint": "^5.13.0",
-    "eslint-config-google": "^0.12.0"
   }
 }

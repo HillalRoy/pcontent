@@ -20,7 +20,9 @@ const makeList = (list, target) => {
     list.forEach(e => {
         let songName = e.name ? e.name : e
 
-        const div = document.createElement("div")
+        const div = document.createElement("a")
+
+        div.href = "#play"
 
         div.setAttribute("onclick", `play("${songName}")`)
 

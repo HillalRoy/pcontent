@@ -1,4 +1,5 @@
 let i = 0
+let sendData
 const songCTime = (ct) => {
     const cm = Math.floor(ct / 60)
     const cs = Math.floor(ct % 60)
@@ -20,6 +21,7 @@ const animate = () => {
         }
     }
 }
+
 let animateL
 const songTime = () => {
     clearInterval(animateL)
@@ -103,31 +105,32 @@ fetch("/api/getfiles")
     .then(data => data.json())
     .then(data => music(data.musics))
 
-const controlMedia = (socket,connectWith)=>{
-   let msg = {
-       to : connectWith
-   }
-    
+
+class MadiaControl{
+    constructor(socket,connectWith){
+        this.socket = socket
+        this.connectWith = connectWith
+    }
+    send(channel, msg){
+        msg.to = this.connectWith
+        this.socket.emit(channel, msg)
+    }
+}
+
+const controlMedia = (socket)=>{
     socket.on("change", msg=>{
 
-    })
-    socket.on("ok", msg=>{
-
+        sendData.send("ok", {status: "ok"})
     })
     socket.on("nochange", msg=>{
-        
+        sendData.send("ok", {status: "ok"})
     })
-
-
-
-
 }
 
 
 
 const id = Math.round(Math.random() * Math.pow(10, 10))
 window.onload = () => {
-    let connectWith
  
     const socket = io()
     socket.emit("control", {
@@ -152,8 +155,8 @@ window.onload = () => {
     $("#idno").onchange = connectPlayer
 
     socket.on("connected", (msg)=>{
-        connectWith = msg.player
+        sendData = new MadiaControl(socket,msg.player)
+        controlMedia(socket)
     })
 
-    controlMedia(socket,connectWith)
 }

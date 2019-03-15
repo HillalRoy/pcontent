@@ -24,4 +24,12 @@ section h1#idno {
   color: #fff;
   letter-spacing: 4px;
 }
+
+#vid {
+  display: none;
+}
+
+#aud {
+  display: none;
+}
 /*# sourceMappingURL=player.css.map */

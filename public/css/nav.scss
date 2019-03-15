@@ -76,12 +76,13 @@ nav {
 
 #logo {
     font-size: 1.2em;
-    color: rgb(117, 97, 55);
+    color: #2196f3;
     display: inline-block;
     padding: 5px 10px 0 0;
-    text-transform: uppercase;
     font-weight: bold;
-
+    span{
+        color: #ff9800;
+    }
     @include mobail{
         display: block;
         padding: 0;
