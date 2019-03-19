@@ -18,6 +18,8 @@ router.get("/video", (_, res) => res.render("video", {title: "Video"}))
 // All content
 router.get("/music", (_, res) => res.render("music", {title: "Music"}))
 
+router.get("/allfiles", (_, res) => res.render("allfiles", {title: "Routs"}))
+
 
 router.get("/player", (_, res) => res.render("player", {title: "Payer"}))
 router.get("/control", (_, res) => res.render("control", {title: "Control"}))

@@ -100,7 +100,6 @@ const keydown = (e) => {
     } else if (e.keyCode === 38) {
         e.preventDefault()
         console.log("/\\")
-
     }
 }
 

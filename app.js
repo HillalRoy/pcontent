@@ -3,11 +3,25 @@ const hbs = require("express-handlebars");
 const upload = require("express-fileupload");
 const http = require("http");
 const path = require("path");
+const bodyParser = require("body-parser");
+const os = require('os');
 
+let port = 80;
+if(os.platform() === "android")
+    port = 8080;
 
 const app = express();
 const server = new http.Server(app);
-const port = process.env.PORT || 80;
+
+// parse various different custom JSON types as JSON
+app.use(bodyParser.json({
+    type: "application/json",
+}))
+
+// parse an HTML body into a string
+app.use(bodyParser.text({
+    type: "text/html",
+}))
 
 
 require(path.join(__dirname, "renders/socket"))(server)
@@ -27,7 +41,7 @@ app.engine("hbs", hbs({
 }))
 app.set("view engine", "hbs")
 
-app.use(files)
+app.use("/file",files)
 app.use("/", render)
 app.use("/api", api)
 
